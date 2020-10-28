@@ -294,8 +294,6 @@ FFmpeg 有几个[lib库](https://link.zhihu.com/?target=https%3A//www.ffmpeg.org
 
 > 流只是数据流的一个昵称
 
-Suppose our video has two streams: an audio encoded with [AAC CODEC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) and a video encoded with [H264 (AVC) CODEC](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC). From each stream we can extract **pieces (slices) of data** called packets that will be loaded into components named [`AVPacket`](https://ffmpeg.org/doxygen/trunk/structAVPacket.html).
-
 假如我们的视频文件有两个流：一个是 [AAC](https://link.zhihu.com/?target=https%3A//en.wikipedia.org/wiki/Advanced_Audio_Coding) 的音频流，一个是 [H264（AVC）](https://link.zhihu.com/?target=https%3A//en.wikipedia.org/wiki/H.264/MPEG-4_AVC)视频流。我们可以从每一个流中提取出数据包，这些数据包将被加载到 [AVPacket](https://link.zhihu.com/?target=https%3A//ffmpeg.org/doxygen/trunk/structAVPacket.html)。
 
 **数据包中的数据仍然是被编码的**（也就是被压缩的），我们为了解码这些数据，我们需要将这些数据给到 [`AVCodec`](https://ffmpeg.org/doxygen/trunk/structAVCodec.html)。
